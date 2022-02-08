@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+  <base>CRM/Blocklist</base>
+  <class>Blocklist</class>
+  <name>civicrm_blocklist</name>
+  <comment></comment>
+  <log>true</log>
+
+  <field>
+    <name>id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Unique Blocklist ID</comment>
+    <html>
+      <type>Number</type>
+    </html>
+  </field>
+  <primaryKey>
+    <name>id</name>
+    <autoincrement>true</autoincrement>
+  </primaryKey>
+
+
+  <field>
+    <name>property_type_id</name>
+    <title>Property Type</title>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>ID of property type</comment>
+    <pseudoconstant>
+      <optionGroupName>blocklist_property_type</optionGroupName>
+    </pseudoconstant>
+    <html>
+      <type>Select</type>
+    </html>
+  </field>
+
+  <field>
+    <name>property_value</name>
+    <title>Property Value</title>
+    <type>varchar</type>
+    <length>512</length>
+    <required>true</required>
+    <comment>Value of the property</comment>
+    <html>
+      <type>Text</type>
+    </html>
+  </field>
+
+  <field>
+    <name>block_reason_id</name>
+    <title>Block Reason</title>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>ID of block reason</comment>
+    <pseudoconstant>
+      <optionGroupName>blocklist_block_reason</optionGroupName>
+    </pseudoconstant>
+    <html>
+      <type>Select</type>
+    </html>
+  </field>
+
+  <field>
+    <name>note</name>
+    <title>Note</title>
+    <type>text</type>
+    <comment>Note</comment>
+    <html>
+      <type>Text</type>
+    </html>
+  </field>
+
+  <field>
+    <name>created_date</name>
+    <type>timestamp</type>
+    <comment></comment>
+    <required>true</required>
+    <default>CURRENT_TIMESTAMP</default>
+    <readonly>true</readonly>
+  </field>
+
+  <field>
+    <name>modified_date</name>
+    <title>Modified Date</title>
+    <type>timestamp</type>
+    <comment></comment>
+    <default>CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP</default>
+    <readonly>true</readonly>
+  </field>
+
+</table>
