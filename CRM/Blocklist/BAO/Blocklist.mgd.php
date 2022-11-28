@@ -110,4 +110,18 @@ return [
       'is_active'       => 1,
     ],
   ],
+  [
+    'module'  => 'blocklist',
+    'name'    => 'blocklist_block_reason_junk',
+    'entity'  => 'OptionValue',
+    'cleanup' => 'never',
+    'params'  => [
+      'version'         => 3,
+      'option_group_id' => 'blocklist_block_reason',
+      'value'           => 3,
+      'name'            => 'junk',
+      'label'           => 'Junk',
+      'is_active'       => 1,
+    ],
+  ],
 ];
